@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muladhar Agronomics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;900&family=Raleway:wght@100;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .mapouter{
+            position:relative;
+            text-align:right;
+            height:100%;
+            width:100%;
+        }
+        .gmap_canvas {
+            overflow:hidden;
+            background:none!important;
+            height:100%;
+            width:100%;
+        }
+        #gmap_canvas{
+            height:100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!--#############################       HEADER      ##################################-->
+    <header class="header header__absolute">
+        <div class="header__linkbox">
+            <a href="index.html" class="header__link" style="cursor: pointer; color: #000 !important">Home</a>
+            <p class="header__link header__dropdown" style="cursor: pointer; color: #000 !important">Who we are <span class="caret fa fa-chevron-down"></span></p>
+            <p class="header__link header__dropdown" style="cursor: pointer; color: #000 !important">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        </div>
+        <div class="header__logobox">
+            <a href="index.html" class="header__logolink">
+                <img src="images/logo1.svg" alt="" class="header__logo">
+            </a>
+        </div>
+        <div class="header__linkbox">
+            <a href="news.html" class="header__link" style="cursor: pointer; color: #000 !important">Our news</a>
+            <a href="contact.html" class="header__link" style="cursor: pointer; color: #000 !important">Get in touch</a>
+        </div>
+    </header>
+    <!--#############################       DROPDOWN    ###################################-->
+    <div class="dropdown">
+        <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+        <a href="our-farmers.html" class="dropdown__link">Our farmers</a>
+        <a href="services.html" class="dropdown__link">Our services</a>
+        <a href="products.html" class="dropdown__link">Our products</a>
+    </div>
+    <!--#############################       DROPDOWN 2   ###################################-->
+    <div class="dropdown">
+        <a href="senior-leadership.html" class="dropdown__link">Senior Leadership</a>
+        <a href="executive-team.html" class="dropdown__link">Executive Team</a>
+        <a href="advisory-board.html" class="dropdown__link">Advisory Board</a>
+    </div>
+    <!--#############################       MOBILEMENU  ###################################-->
+    <div class="mobile__burger">
+        <div class="mobile__burger--line mobile__burger--top"></div>
+        <div class="mobile__burger--line mobile__burger--center"></div>
+        <div class="mobile__burger--line mobile__burger--bottom"></div>
+    </div>
+
+    <div class="mobile__menu">
+        <a href="index.html" class="mobile__menulink">Home</a>
+        <p class="mobile__menulink mobile__dropdownbutton">Who we are <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+            <a href="our-farmers.html" class="mobile__menulink">Our farmers</a>
+            <a href="services.html" class="mobile__menulink">Our services</a>
+            <a href="products.html" class="mobile__menulink">Our products</a>
+        </div>
+        <p class="mobile__menulink mobile__dropdownbutton">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="board-members.html" class="mobile__menulink">Board Members</a>
+            <a href="advisory-board.html" class="mobile__menulink">Advisory Board</a>
+            <a href="core-team.html" class="mobile__menulink">Core Team</a>
+        </div>
+        <a href="news.html" class="mobile__menulink">Our news</a>
+        <a href="contact.html" class="mobile__menulink">Get in touch</a>
+    </div>
+    <!--############################    BANNER      ###########################################-->
+    <div class="banner">
+        <img src="images/contact-banner.jpg" alt="" class="banner__image">
+        <p class="banner__title">About Our</p>
+        <h4 class="banner__heading">SEEDS</h4>
+        <p class="banner__paragraph">
+            We are coming with the initiative of providing seeds to the farmer.
+        </p>
+    </div>
+    <!--##########################      CONTACT BLOCKS  ########################################-->
+    <div class="contact">
+        <div class="contact__blocks">
+            <div class="contact__blocks--block">
+                <svg class="contact__blocks--icon">
+                    <use href="images/sprite.svg#icon-location2"></use>
+                </svg>
+                <h6 class="contact__blocks--heading">ADDRESS</h6>
+                <p class="contact__blocks--paragraph" style="text-align: center;">Jhajara, Chakrata Road P.O.Suddhowala,Tehsil Vikasnagar, 248007</p>
+            </div>
+            <div class="contact__blocks--block">
+                <svg class="contact__blocks--icon">
+                    <use href="images/sprite.svg#icon-phone"></use>
+                </svg>
+                <h6 class="contact__blocks--heading">PHONE</h6>
+                <a href="tel:+91844950998" class="contact__blocks--link">+91 941 031 5083</a>
+            </div>
+            <div class="contact__blocks--block">
+                <svg class="contact__blocks--icon">
+                    <use href="images/sprite.svg#icon-envelop"></use>
+                </svg>
+                <h6 class="contact__blocks--heading">EMAIL</h6>
+                <a href="mailto:write2ranarahul@gmail.com" class="contact__blocks--link">muladhar.info@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <!--#############################       FOOTER      ##################################-->
+   <footer class="footer">
+    <div class="footer__grid">
+        <div class="footer__left">
+            <a href="#" class="footer__left--logoBox">
+                <img src="images/logo-final.svg" alt="" class="footer__left--logo">
+            </a>
+            <div class="footer__left--contentBox">
+                <p class="footer__left--address">160 A Rajpur Road, Dehradun, Uttarakhand, 248001</p>
+                <div class="footer__left--numbers">
+                    <a href="tel:+919410315083" class="footer__left--phone">+91 941 031 5083</a>
+                </div>
+                <div class="footer__left--emails">
+                    <a href="mailto:muladhar.info@gmail.com " class="footer__left--mail">muladhar.info@gmail.com </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__center">
+            <a href="#" class="footer__center--link">
+                <svg class="footer__center--social">
+                    <use href='images/social-sprite.svg#icon-facebook'></use>
+                </svg>
+            </a>
+            <a href="#" class="footer__center--link">
+                <svg class="footer__center--social">
+                    <use href='images/social-sprite.svg#icon-twitter'></use>
+                </svg>
+            </a>
+            <a href="#" class="footer__center--link">
+                <svg class="footer__center--social">
+                    <use href='images/social-sprite.svg#icon-linkedin'></use>
+                </svg>
+            </a>
+        </div>
+        <div class="footer__right">
+            <h6 class="footer__right--heading">GET A NEWSLATTER</h6>
+            <form action="#" class="footer__right--newsletter">
+                <input type="email" id="footerEmail" class="footer__right--email" placeholder="Your Email">
+                <button type="submit" class="footer__right--button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <p class="footer__copyrights">
+        All rights reserved. Created by, <a href="index.html">Muladhar</a>. 2019. Technology partner: <a href="http://adhyay.co.in" target="_blank">Adhyay Co.</a>
+    </p>
+</footer>
+<script src="js/dropdown.js"></script>
+<script src="js/mobilemenu.js"></script>
+</body>
+</html>

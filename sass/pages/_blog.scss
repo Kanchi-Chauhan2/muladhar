@@ -1,0 +1,167 @@
+.blog{
+    width: 100%;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    grid-gap: 5rem;
+    grid-auto-rows: auto;
+    &__left{
+        width: 100%;
+        position: relative;
+        &--image{
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+
+        &--commentbox{
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3.2rem;
+            margin: 3rem 0;
+            position: relative;
+            font-style: italic;
+            padding: 3rem 6rem;
+            border: none;
+            border-left: 4px solid #fcd641;
+        }
+
+        &--comment{
+            color:rgb(34, 34, 34);
+            display:block;
+            font-size:1.8rem;
+            font-style:italic;
+            font-weight:400;
+        }
+
+        &--list{
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &--listitem{
+            line-height: 1.6;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #666;
+            list-style: inside;
+            & a{
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #666;
+                transition: .3s;
+                &:hover{
+                    color: $color--primary--yellow;
+                }
+            }
+        }
+
+    }
+    &__paragraph{
+        color:rgb(34, 34, 34);
+        display:block;
+        margin-bottom: 2rem;
+        font-size:14px;
+        font-weight:400;
+        line-height: 22px;
+    }
+    &__primaryheading{
+        line-height: 1.2;
+        font-weight: 900;
+        font-family: Raleway,sans-serif;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 4rem;
+        margin: 2rem 0;
+    }
+    &__secondaryheading{
+        line-height: 1.2;
+        font-weight: 900;
+        font-family: Raleway,sans-serif;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+    &__tertiaryheading{
+        line-height: 1.2;
+        font-weight: 900;
+        font-family: Raleway,sans-serif;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 1.8rem;
+        margin: 2rem 0;
+    }
+
+    &__tiles{
+        display: grid;
+        padding: 2rem 0;
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 20vw;
+        grid-gap: 2rem;
+        @media only screen and (max-width: 28.125em){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__tile{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 5;
+            object-fit: cover;
+        }
+        &--heading{
+            position: relative;
+            z-index: 10;
+            line-height: 1.2;
+            font-weight: 900;
+            font-family: Raleway,sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.8rem;
+            margin: 2rem 0;
+        }
+    }
+
+    &__right{
+        position: relative;
+        &--image{
+            width: 100%;
+        }
+    }
+
+    &__button{
+        display: block;
+            width: max-content;
+            margin-top: 1.5rem;
+            color: rgb(79, 74, 55);
+            padding: 1.9rem 4.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: $font--raleway;
+            border-radius: 3rem;
+            border: 2px solid $color--primary--yellow;
+            transition: .3s;
+
+            &:hover{
+                background-color: $color--primary--yellow;
+            }
+
+            @media only screen and (max-width : 64em){
+                padding: .9rem 2rem;
+            }
+    }
+}

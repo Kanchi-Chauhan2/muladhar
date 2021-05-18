@@ -1,0 +1,168 @@
+.footer{
+    padding: 5rem 10rem;
+    background-color: #fff;
+    @media only screen and (max-width: 64em){
+        padding: 5rem;
+    }
+    @media only screen and (max-width: 48em){
+        padding: 2.5rem;
+    }
+    &__grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-auto-rows: auto;
+        grid-gap: 2rem;
+        @media only screen and (max-width: 48em){
+            grid-template-columns: 1fr 7rem;
+        }
+    }
+    &__left{
+        width: 100%;
+        display: flex;
+        &--logoBox{
+            width: 10rem;
+            display: inline-block;
+            position:relative;
+        }
+        &--logo{
+            position:absolute;
+            width: 20rem;
+            top:-5rem;
+        }
+        &--contentBox{
+            margin-left: 23rem;
+        }
+        &--address{
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-size: 1.3rem;
+            font-style: normal;
+            margin-bottom: 1rem;
+        }
+        &--numbers{
+            width: 100%;
+            display: block;
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-size: 1.3rem;
+            font-style: normal;
+            margin-bottom: 1rem;
+        }
+        &--phone{
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-size: 1.3rem;
+            font-style: normal;
+            margin-bottom: 1rem;
+        }
+        &--emails{
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-size: 1.3rem;
+            font-style: normal;
+            margin-bottom: 1rem;
+        }
+        &--mail{
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-size: 1.3rem;
+            font-style: normal;
+            margin-bottom: 1rem;
+            transition: .3s;
+            &:hover{
+                color: $color--primary--yellow;
+            }
+        }
+    }
+    &__center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &--link{
+            display: block;
+            margin-right: 1rem;
+        }
+        
+        &--social{
+            width: 2rem;
+            height: 2rem;
+            transition: .3s;
+            fill: #ccc;
+            &:hover{
+                fill: $color--primary--yellow;
+            }
+        }
+    }
+    &__right{
+        
+        &--heading{
+            font-size: 1.6rem;
+            font-family: $font--raleway;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            @media only screen and (max-width: 48em){
+                margin-bottom: 0;
+            }
+        }
+        &--newsletter{
+            display: flex;
+            align-items: center;
+            
+        }
+        &--email{
+            margin-right: 1rem;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            outline: 0px;
+            padding: 1rem .75rem;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            background-color: transparent;
+            font-size: 1.4rem;
+            align-self: flex-end;
+        }
+        &--button{
+            grid-column: span 2;
+            display: block;
+            padding: .9rem 2rem;
+            font-size: 1.2rem;
+            font-family: Raleway, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            color: rgb(79, 74, 55);
+            border-radius: 3rem;
+            border: 2px solid $color--primary--yellow;
+            background-color: transparent;
+            transition: .3s;
+            margin-top: 3rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $color--primary--yellow;
+            }
+
+            @media only screen and (max-width: 64em){
+                padding: .9rem 2rem;
+            }
+            @media only screen and (max-width: 48em){
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__copyrights{
+        margin-top: 2rem;
+        color: #b4b4b4;
+        font-size: 1.3rem;
+        font-weight: 400;
+
+        a{
+            color: $color--primary--yellow;
+        }
+
+    }
+
+}

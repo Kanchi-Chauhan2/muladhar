@@ -1,0 +1,83 @@
+.banner{
+    position: relative;
+    height: 48vw;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding-left: 5rem;
+
+    &__right{
+        padding-right: 5rem;
+        padding-left: 2.5rem;
+        text-align: right;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+
+    @media only screen and (max-width: 48em){
+        height: 55vw;
+    }
+
+    @media only screen and (max-width: 28.125em){
+        height: 70vw;
+        padding: 2.5rem;
+    }
+
+    &__image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1.05);
+        object-position: 50% 50%;
+    }
+    &__title{
+        position: relative;
+        margin-top: 15%;
+        font-size: 3rem;
+        z-index: 6;
+        font-weight: 100;
+        color: #fff;
+        font-family: $font--raleway;
+        @media only screen and (max-width: 48em){
+            font-size: 2rem;
+            z-index: 6;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+    &__heading{
+        position: relative;
+        margin-top: 1rem;
+        z-index: 6;
+        font-size: 4.5rem;
+        color: #fff;
+        font-weight: 900;
+        position: relative;
+        font-family: 'EssonnesHeadlineThin';
+        @media only screen and (max-width: 48em){
+            z-index: 6;
+            font-size: 4.5rem;
+        }
+    }
+    &__paragraph{
+        position: relative;
+        font-family: 'BigCaslonMedium';
+        font-weight: 400;
+        color: #fff;
+        position: relative;
+        z-index: 6;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        width: 50rem;
+        @media only screen and (max-width: 48em){
+            width: 100%;
+        }
+    }
+}

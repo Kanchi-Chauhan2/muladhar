@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muladhar Agronomics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;900&family=Raleway:wght@100;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <style>
+        .popup{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100000;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(.5);
+        }
+        .popup:target{
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        .popup__close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 5rem;
+            width: 5rem;
+            background-color: #fff;
+            z-index: 10000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup__close::after{
+            content: 'X';
+            color: #222;
+            font-size: 3rem;
+        }
+        .popup__content{
+            position: relative;
+            padding: 5rem;
+            background-color: #f59649;
+            width:80%;
+            z-index: 10000000;
+        }
+        .popup__content::before, .popup__content::after{
+            font-size: 10rem;
+            position: absolute;
+            z-index: 0;
+            color: rgba(255, 255, 255, 0.2);
+        }
+        .popup__content::before{
+            content: '“';
+            top: 1rem;
+            left: 2rem;
+        }
+        .popup__content::after{
+            content: '”';
+            bottom: -1rem;
+            right: 2rem;
+        }
+        .popup__content--paragraph{
+            line-height: 1.2;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1000000;
+        }
+        .popup__content--paragraph strong{
+            color: #000;
+        }
+        @media only screen and (max-width: 48em){
+            .popup__content{
+                width: 90%;
+            }
+        }
+        @media only screen and (max-width: 28.125em){
+            .popup__content{
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="popup" id="popup1">
+        <a href="#member1" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Paremdar-</strong> With a B.tech in mechanical engineering and M.tech in environment technology- Param has worked with various government organisations researching on sustainable development and brings his knowledge forth to Muladhar's vision of Sustainable Agriculture with hopes of giving back plenty to his mother city Ramnagar.
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup2">
+        <a href="#member2" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Bhanu-</strong> Bhanu has been working with corporates for over 5 years now. With his specialisation in institutional sales, he is one with Muladhar and shares our vision to create a better everyday life for farmers and our consumers.
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup3">
+        <a href="#member3" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Mintu-</strong> Interests ranging from Sketching and Painting to playing basketball and travelling, Mintu from Guwahati brings his photography and writing skills as well as client handling and event management skills to Muladhar's platform in hopes to help the societies and communities in our Uttarakhand.
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup4">
+        <a href="#member4" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Akshay-</strong> Akshay strongly believes in working for what one is passionate about. He founded his own company Big Band Theory inculcating his love for music in 2015 post working with Google. Born and brought up in Dehradun, he strongly feels for the farmers of Uttarakhand and wants to make sure our customers connect with Muladhar's vision too.
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup5">
+        <a href="#member5" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Turiya-</strong> With a degree in Bsc Economics and an endless love for Marketing- Turiya has worked with many startups finally settling to associate with Muladhar. Her vision synthesizes with Muladhar and she hopes to make a difference which will help in contributing towards the macro growth of the farmer who cultivate in the very soil she was brought up in.
+            </p>
+        </div>
+    </div>
+    <!--#############################       HEADER      ##################################-->
+    <header class="header header__absolute">
+        <div class="header__linkbox">
+            <a href="index.html" class="header__link">Home</a>
+            <p class="header__link header__dropdown" style="cursor: pointer;">Who we are <span class="caret fa fa-chevron-down"></span></p>
+            <p class="header__link header__dropdown select" style="cursor: pointer;">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        </div>
+        <div class="header__logobox">
+            <a href="index.html" class="header__logolink">
+                <img src="images/logo1.svg" alt="" class="header__logo">
+            </a>
+        </div>
+        <div class="header__linkbox">
+            <a href="news.html" class="header__link">Our news</a>
+            <a href="contact.html" class="header__link">Get in touch</a>
+        </div>
+    </header>
+    <!--#############################       DROPDOWN    ###################################-->
+    <div class="dropdown">
+        <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+        <a href="our-farmers.html" class="dropdown__link">Our farmers</a>
+        <a href="services.html" class="dropdown__link">Our services</a>
+        <a href="products.html" class="dropdown__link">Our products</a>
+    </div>
+    <!--#############################       DROPDOWN 2   ###################################-->
+    <div class="dropdown">
+        <a href="senior-leadership.html" class="dropdown__link">Senior Leadership</a>
+        <a href="executive-team.html" class="dropdown__link">Executive Team</a>
+        <a href="advisory-board.html" class="dropdown__link">Advisory Board</a>
+    </div>
+    <!--#############################       MOBILEMENU  ###################################-->
+    <div class="mobile__burger">
+        <div class="mobile__burger--line mobile__burger--top"></div>
+        <div class="mobile__burger--line mobile__burger--center"></div>
+        <div class="mobile__burger--line mobile__burger--bottom"></div>
+    </div>
+
+    <div class="mobile__menu">
+        <a href="index.html" class="mobile__menulink">Home</a>
+        <p class="mobile__menulink mobile__dropdownbutton">Who we are <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+            <a href="our-farmers.html" class="mobile__menulink">Our farmers</a>
+            <a href="services.html" class="mobile__menulink">Our services</a>
+            <a href="products.html" class="mobile__menulink">Our products</a>
+        </div>
+        <p class="mobile__menulink mobile__dropdownbutton">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="board-members.html" class="mobile__menulink">Board Members</a>
+            <a href="advisory-board.html" class="mobile__menulink">Advisory Board</a>
+            <a href="core-team.html" class="mobile__menulink">Core Team</a>
+        </div>
+        <a href="news.html" class="mobile__menulink">Our news</a>
+        <a href="contact.html" class="mobile__menulink">Get in touch</a>
+    </div>
+    <!--############################    BANNER      ###########################################-->
+    <div class="banner">
+        <img src="images/member-banner.jpg" alt="" class="banner__image">
+        <p class="banner__title">More About</p>
+        <h4 class="banner__heading">EXECUTIVE TEAM</h4>
+        <p class="banner__paragraph">
+            Our Executive Team is committed to creating a business that nourishes the environment in a healthy, responsible, and sustainable manner. They are responsible for the company's strategic strategy, talent growth, and financial results. Despite having a wide range of experience both within and outside of Muladhar Agronomics, each of them has a proven track record of motivating others to accomplish goals.They're working together to make Muladhar Agronomics the most dependable partner in the food, agriculture, and nutrition industries.
+        </p>
+    </div>
+
+    
+     <!--############################    ABOUT TEAM      ###########################################-->
+    <div class="about">
+        <h4 class="about__team--heading">OUR CORE <span>TEAM</span> </h4>
+        <div class="about__team">
+            <!--<div class="about__team--member" id="member1">
+                <div class="about__team--imagebox">
+                    <img src="images/Parmender-Singh.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup1" class="about__team--name">
+                        Parmendar Singh
+                    </a>
+                    <p class="about__team--occupation">
+                        Technical and Scientific Advisor
+                    </p>
+                </div>
+            </div>-->
+            <div class="about__team--member" id="member2">
+                <div class="about__team--imagebox">
+                    <img src="images/Bhanu-pratap-singh.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup2" class="about__team--name">
+                        Bhanu Pratap Singh
+                    </a>
+                    <p class="about__team--occupation">
+                        Institutional Sales Manager
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member3">
+                <div class="about__team--imagebox">
+                    <img src="images/Mintu-kalita.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup3" class="about__team--name">
+                        Mintu Kalita
+                    </a>
+                    <p class="about__team--occupation">
+                        Agriculture Supervisor
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member4">
+                <div class="about__team--imagebox">
+                    <img src="images/Akshay-Ahuja.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup4" class="about__team--name">
+                        Akshay Ahuja
+                    </a>
+                    <p class="about__team--occupation">
+                        Brand Manager
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member5">
+                <div class="about__team--imagebox">
+                    <img src="images/Turiya-Joshi.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup5" class="about__team--name">
+                        Turiya Joshi
+                    </a>
+                    <p class="about__team--occupation">
+                        Marketing Manager
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--############################    ABOUT NUMBERS      ###########################################
+     <div class="about">
+        <div class="about__numbers">
+            <div class="about__numbers--box">
+                <img src="images/ico_count_1-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">1950</h4>
+                    <p class="about__numbers--paragraph">Tons of products</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_2-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">300</h4>
+                    <p class="about__numbers--paragraph">Vendor Outlets</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_3-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">648</h4>
+                    <p class="about__numbers--paragraph">Area (Hector)</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_4-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">1000</h4>
+                    <p class="about__numbers--paragraph">Area to harvest (Hecto) </p>
+                </div>
+            </div>            
+        </div>
+    </div>-->
+    <!--############################    ABOUT TIMELINE      ###########################################-->
+    <!--<div class="about timeline">
+        <div class="about__timeline">
+            <h4 class="about__timeline--heading">
+                OUR<span> HISTORY</span>
+            </h4>
+
+            
+            <div class="about__timeline--grid">
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2015
+                        </h4>
+                        <p class="about__timeline--title">
+                            The inception of the Idea is taking place
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Armaan Kapoor began to perceive the economically autonomous farmer and the world in which no one is undernourished
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2019
+                        </h4>
+                        <p class="about__timeline--title">
+                            The Muladhar Agronomics Society was drafted
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            The existence of the agronomics movement started keeping the bigger picture in mind, to revolutionize agriculture sector 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2020
+                        </h4>
+                        <p class="about__timeline--title">
+                            Incorporation of the society was initiated
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            With our great efforts, we are happy to mention that the final incorporation was completed in Aug 2020, and we officiated our work with the farmers 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2020
+                        </h4>
+                        <p class="about__timeline--title">
+                            Our service expansion program 
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Muladhar added the following art of work within the agribusiness, including- milling, refining, specialty foods, nutritious ingredients and so on.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="about timeline">
+        <div class="about__timeline">
+            <h4 class="about__timeline--heading">
+                OUR<span> HISTORY</span>
+            </h4>
+
+            
+            <div class="about__timeline--grid">
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2018
+                        </h4>
+                        <p class="about__timeline--title">
+                            The inception of the Idea is taking place
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Mr.Abhishek Thapliyal began to perceive the economically autonomous farmer and the world in which no one is undernourished
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2020
+                        </h4>
+                        <p class="about__timeline--title">
+                            The Muladhar Agronomics Society was drafted
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            The existence of the agronomics movement started keeping the bigger picture in mind, to revolutionize agriculture sector. Creating a global footprint by serving globally                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2021
+                        </h4>
+                        <p class="about__timeline--title">
+                            Incorporation was initiated                         </p>
+                        <p class="about__timeline--paragraph">
+                            With our great efforts, we are happy to mention that the final incorporation was completed in Aug 2020, and we officiated our work with the farmers 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2022
+                        </h4>
+                        <p class="about__timeline--title">
+                            Our service expansion program 
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Muladhar added the following art of work within the agribusiness, including- milling, refining, specialty foods, nutritious ingredients and so on.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--#############################       HOME FORM      ##################################-->
+    <div class="home" style="padding: 0;">
+        <div class="home__form">
+            <h4 class="home__form--heading">GET <span>IN TOUCH</span></h4>
+            <p class="home__form--paragraph">
+                We value anything you have to say to us, feel free to reach out at us!
+            </p>
+            <form action="#" class="home__form--form">
+                <input type="text" id="name" class="home__form--text" placeholder="Name">
+                <input type="email" id="email" class="home__form--text" placeholder="Email">
+                <textarea id="message" class="home__form--message" placeholder="COMMENT"></textarea>
+                <button type="submit" class="home__form--button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <!--#############################       FOOTER      ##################################-->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__left">
+                <a href="#" class="footer__left--logoBox">
+                    <img src="images/logo-final.svg" alt="" class="footer__left--logo">
+                </a>
+                <div class="footer__left--contentBox">
+                    <p class="footer__left--address">160 A Rajpur Road, Dehradun, Uttarakhand, 248001</p>
+                    <div class="footer__left--numbers">
+                        <a href="tel:+919410315083" class="footer__left--phone">+91 941 031 5083</a>
+                    </div>
+                    <div class="footer__left--emails">
+                        <a href="mailto:muladhar.info@gmail.com " class="footer__left--mail">muladhar.info@gmail.com </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__center">
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-facebook'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-twitter'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-linkedin'></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__right">
+                <h6 class="footer__right--heading">GET A NEWSLATTER</h6>
+                <form action="#" class="footer__right--newsletter">
+                    <input type="email" id="footerEmail" class="footer__right--email" placeholder="Your Email">
+                    <button type="submit" class="footer__right--button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copyrights">
+            All rights reserved. Created by, <a href="index.html">Muladhar</a>. 2019. Technology partner: <a href="http://adhyay.co.in" target="_blank">Adhyay Co.</a>
+        </p>
+    </footer>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobilemenu.js"></script>
+</body>
+</html>

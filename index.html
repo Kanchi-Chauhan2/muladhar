@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muladhar Agronomics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@100;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    
+    <audio  id="music" autoplay>
+        <source src="audio.mp3">
+    </audio>
+    <div class="music select">
+        <i class="fas fa-volume-up"></i>
+        <i class="fas fa-volume-mute"></i>
+    </div>
+
+    <script>
+        var audio = document.getElementById('music');
+        var player = document.querySelector('.music');
+        player.addEventListener('click',function(){
+            if( player.classList.contains('select') ){
+                player.classList.remove('select');
+                audio.pause();
+            }else{
+                player.classList.add('select');
+                audio.play();
+            }
+        });
+    </script>
+    
+    
+    <!--#############################       HEADER      ##################################-->
+    <header class="header">
+        <div class="header__linkbox">
+            <a href="#" class="header__link select">Home</a>
+            <p class="header__link header__dropdown" style="cursor: pointer;">Who we are <span class="caret fa fa-chevron-down"></span></p>
+            <p class="header__link header__dropdown" style="cursor: pointer;">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        </div>
+        <div class="header__logobox">
+            <a href="#" class="header__logolink">
+                <img src="images/logo1.svg" alt="" class="header__logo">
+            </a>
+        </div>
+        <div class="header__linkbox">
+            <a href="news.html" class="header__link">Our news</a>
+            <a href="contact.html" class="header__link">Get in touch</a>
+        </div>
+    </header>
+    <!--#############################       DROPDOWN    ###################################-->
+    <div class="dropdown">
+        <a href="about-cooperative.html" class="dropdown__link">About Muladhar</a>
+        <a href="our-farmers.html" class="dropdown__link">Our farmers</a>
+        <a href="services.html" class="dropdown__link">Our services</a>
+        <a href="products.html" class="dropdown__link">Our products</a>
+    </div>
+    <!--#############################       DROPDOWN 2   ###################################-->
+    <div class="dropdown">
+        <a href="senior-leadership.html" class="dropdown__link">Senior Leadership</a>
+        <a href="executive-team.html" class="dropdown__link">Executive Team</a>
+        <a href="advisory-board.html" class="dropdown__link">Advisory Board</a>
+    </div>
+    <!--#############################       MOBILEMENU  ###################################-->
+    <div class="mobile__burger">
+        <div class="mobile__burger--line mobile__burger--top"></div>
+        <div class="mobile__burger--line mobile__burger--center"></div>
+        <div class="mobile__burger--line mobile__burger--bottom"></div>
+    </div>
+
+    <div class="mobile__menu">
+        <a href="#" class="mobile__menulink">Home</a>
+        <p class="mobile__menulink mobile__dropdownbutton">Who we are <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="our-farmers.html" class="mobile__menulink">Our farmers</a>
+            <a href="services.html" class="mobile__menulink">Our services</a>
+            <a href="products.html" class="mobile__menulink">Our products</a>
+        </div>
+        <p class="mobile__menulink mobile__dropdownbutton">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="board-members.html" class="mobile__menulink">Board Members</a>
+            <a href="advisory-board.html" class="mobile__menulink">Advisory Board</a>
+            <a href="core-team.html" class="mobile__menulink">Core Team</a>
+        </div>
+        <a href="news.html" class="mobile__menulink">Our news</a>
+        <a href="contact.html" class="mobile__menulink">Get in touch</a>
+    </div>
+
+    <!--#############################       SLIDESHOW      ##################################-->
+    <div class="slideshow">
+        <div class="slideshow__container">
+            <div class="slide current">
+                <img src="images/slide1.jpg" alt="" class="slideshow__image current">
+                <p class="slideshow__title current">Muladhar Agronomics</p>
+                <p class="slideshow__heading current">FARMER'S CONNECT </p> 
+                <p class="slideshow__paragraph current">Connecting farmers to consumers</p>
+                <a href="products.html" class="button slideshow__button current">DISCOVER</a>
+            </div>
+            <div class="slide previous">
+                <img src="images/slide2.jpg" alt="" class="slideshow__image previous">
+                <p class="slideshow__title previous">Muladhar Agronomics</p>
+                <p class="slideshow__heading previous">FRESH PICKED </p>
+                <p class="slideshow__paragraph previous">Providing fresh vegetables on daily basis </p>
+                <a href="products.html" class="button slideshow__button previous">DISCOVER</a>
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="" class="slideshow__image">
+                <p class="slideshow__title">Muladhar Agronomics</p>
+                <p class="slideshow__heading">HEALTHY EATING </p>
+                <p class="slideshow__paragraph">Promoting healthy and fresh eating habits</p>
+                <a href="products.html" class="button slideshow__button">DISCOVER</a>
+            </div>
+        </div>
+        <div class="slideshow__dots">
+            <div class="slideshow__dot select"></div>
+            <div class="slideshow__dot"></div>
+            <div class="slideshow__dot"></div>
+        </div>
+        <div class="slideshow__loader">
+            <div class="slideshow__progress"></div>
+        </div>
+    </div>
+
+    <!--#############################       POSTERS      ##################################-->
+    <section class="posters">
+        <div class="poster">
+            <h2 class="poster__heading">GRAINS</h2>
+        </div>
+        <div class="poster">
+            <h2 class="poster__heading">SPICES</h2>
+        </div>
+        <div class="poster__pseudobox"></div>
+    </section>
+
+    <!--#############################       TILE        ####################################-->
+
+    <div class="tile">
+        <div class="tile__container">
+            <h2 class="tile__heading">INDIA<br> <span>Muladhar Agronomics</span> </h2>
+            <p class="tile__paragraph">
+                Muladhar Agronomics is a company that focuses on the socio-economic well being of Farmers of Uttarakhand and North-East Himalayan regions. Organic farming and sustainable farming in Smallholdings is the mission of the company. Justifying its name Muladhar aims to strengthen the roots of the Indian farmer’s fraternity and its economic matrix.
+            </p>
+            <a href="about-cooperative.html" class="tile__button">DISCOVER</a>
+        </div>
+    </div>
+
+    <!--#############################       BLEND HEADING      ##################################-->
+    <div class="blend">
+        <h2 class="blend__heading">HEALTHY PRODUCTS <br> FOR YOU, THE PEOPLE</h2>
+    </div>
+    <!--#############################       HOME ABOUT      ##################################-->
+    <div class="home">
+        <div class="home__about">
+            <div class="home__about--left">
+                <h4 class="home__about--heading">FROM FARMERS <br> <span>WITH LOVE</span> </h4>
+                <a href="#" class="home__about--button">MORE ABOUT</a>
+            </div>
+            <div class="home__about--center">
+                <img src="images/img_1.png" alt="" class="home__about--image">
+            </div>
+            <div class="home__about--right">
+                <p class="home__about--paragraph">
+                    Our farmers are the ones who bring happiness to our lives through their hard work in the fields and growing our favourite dietary food.
+                </p>
+                <p class="home__about--paragraph">
+                    Muladhar is creating a platform, complementing the existing agronomic potential in India by promoting sustainable practices using latest IoT(Internet of Things) technologies in support of the farmers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--#############################       HOME MAP      ##################################-->
+    <div class="home">
+        <div class="home__map">
+            <h4 class="home__map--heading">WE ARE <span>ON THE WORLD </span> </h4>
+            <p class="home__map--paragraph">Our recent advancements are towards Japan East Asia and our export services expand to the whole world.</p>
+            <div class="home__map--map">
+                <div class="home__map--location home__map--india">
+                    <div class="home__map--dot"></div>
+                    <p class="home__map--name">INDIA</p>
+                </div>
+                <div class="home__map--location home__map--japan">
+                    <div class="home__map--dot"></div>
+                    <p class="home__map--name">JAPAN</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!--#############################       HOME PRODUCTS      ##################################-->
+    <div class="home" style="padding: 2rem;">
+        <div class="home__products">
+            <div class="home__products--product home__products--product--1">
+                <h4 class="home__products--heading">OUR <span>SERVICES</span> </h4>
+                <p class="home__products--paragraph">At Muladhar Agronomics, we are enabling access to nutrition worldwide. With industry-leading technologies, a diverse range of products and strategies to satisfy all preferences, and a dedication to sustainability, we are giving consumers the edge to overcome the food problems of today and tomorrow. <br>We are a pioneer in human and animal nutrition and the leading agricultural origin and processing Cooperative. Our scope, perspectives, facilities, and logistics experience provide us with unmatched capabilities to fulfil food, beverage, fitness, and wellness needs, and more. From the seed of the thought to the result of the solution, we are enriching the quality of life of the planet.   </p>
+                <a href="services.html" class="home__products--button">KNOW MORE</a>
+            </div>
+            <div class="home__products--product home__products--product--2">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">AGRICULTURE</h4>
+            </div>
+            <div class="home__products--product home__products--product--3">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">HORTICULTURE</h4>
+            </div>
+            <div class="home__products--product home__products--product--4">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">FLORICULTURE</h4>
+            </div>
+            <div class="home__products--product home__products--product--5">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">HYDROPONIC</h4>
+            </div>
+            <div class="home__products--product home__products--product--6">
+                <h4 class="home__products--title">WE ARE BRINGING<br>THE BEST FOR YOU</h4>
+            </div>
+            <div class="home__products--product home__products--product--7">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">HUSBANDRY</h4>
+            </div>
+            <div class="home__products--product home__products--product--8">
+                <div class="home__products--overlay"></div>
+                <h4 class="home__products--title">HANDICRAFT</h4>
+            </div>
+        </div>
+    </div>
+    <!--#############################       HOME TESTIMONIAL      ##################################-->
+    <div class="home" style="padding: 0;">
+        <div class="home__testimonial">
+            <h4 class="home__testimonial--heading">PEOPLE ARE TALKING <span>ABOUT MULADHAR</span> </h4>
+            <p class="home__testimonial--paragraph">We are all one and our aim is to bring a positive change, and most of the people agree with us, this is what they have to say.</p>
+            <div class="home__testimonial--overflowcontainer">
+                <div class="home__testimonial--container" style="left: 0;">
+                    <div class="home__testimonial--box">
+                        <p class="home__testimonial--comment">
+                           With our initiative, we are confident that our the agriculture industry will have a more dynamic approach, that means the work flow of getting the crop from the fields of farmer to the final product reaching to consumers, will get faster and easier. This in turn will help our farmer’s fraternity to support them and their family in a better way!
+                        </p>
+                        <div class="home__testimonial--person">
+                            <img src="images/face.png" alt="" class="home__testimonial--image">
+                            <p class="home__testimonial--name">Rahul Singh Rana</p>
+                        </div>
+                    </div>
+                    <div class="home__testimonial--box">
+                        <p class="home__testimonial--comment">
+                            Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over
+                        </p>
+                        <div class="home__testimonial--person">
+                            <img src="images/face.png" alt="" class="home__testimonial--image">
+                            <p class="home__testimonial--name">Rahul Singh Rana</p>
+                        </div>
+                    </div>
+                    <div class="home__testimonial--box">
+                        <p class="home__testimonial--comment">
+                            Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over
+                        </p>
+                        <div class="home__testimonial--person">
+                            <img src="images/face.png" alt="" class="home__testimonial--image">
+                            <p class="home__testimonial--name">Rahul Singh Rana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#############################       HOME BLOGS      ##################################-->
+    <div class="home">
+        <div class="home__blogs">
+            <h4 class="home__blogs--heading">FOOD <span>IS FUNDAMENTAL</span> </h4>
+            <!--<p class="home__blogs--paragraph">We are consistently working towards the society and would like to share some of the blogs and news with you.</p>-->
+
+            <div class="home__blogs--grid">
+                <div class="home__blogs--blog">
+                    <div class="home__blogs--datebox">
+                        <h6 class="home__blogs--date">03</h6>
+                        <p class="home__blogs--month">Dec</p>
+                    </div>
+                    <div class="home__blogs--imageBox">
+                        <img src="images/blog1.jpg" alt="" class="home__blogs--image">
+                    </div>
+                    <div class="home__blogs--contentBox">
+                        <p class="home__blogs--contentTitle">DIET / TIPS & GUIDES</p>
+                        <a href="our-farmers.html" class="home__blogs--contentLink">Our Farmers</a>
+                        <!--<p class="home__blogs--contentSummary">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>-->
+                        <a href="our-farmers.html" class="home__blogs--button">READ MORE</a>
+                    </div>
+                </div>
+                <div class="home__blogs--blog">
+                    <div class="home__blogs--datebox">
+                        <h6 class="home__blogs--date">03</h6>
+                        <p class="home__blogs--month">Dec</p>
+                    </div>
+                    <div class="home__blogs--imageBox">
+                        <img src="images/blog2.jpg" alt="" class="home__blogs--image">
+                    </div>
+                    <div class="home__blogs--contentBox">
+                        <p class="home__blogs--contentTitle">DIET / TIPS & GUIDES</p>
+                        <a href="services.html" class="home__blogs--contentLink">Our Service</a>
+                        <!--<p class="home__blogs--contentSummary">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>-->
+                        <a href="services.html" class="home__blogs--button">READ MORE</a>
+                    </div>
+                </div>
+                <div class="home__blogs--blog">
+                    <div class="home__blogs--datebox">
+                        <h6 class="home__blogs--date">03</h6>
+                        <p class="home__blogs--month">Dec</p>
+                    </div>
+                    <div class="home__blogs--imageBox">
+                        <img src="images/blog3.jpg" alt="" class="home__blogs--image">
+                    </div>
+                    <div class="home__blogs--contentBox">
+                        <p class="home__blogs--contentTitle">DIET / TIPS &amp; GUIDES</p>
+                        <a href="products.html" class="home__blogs--contentLink">Our Product</a>
+                        <!--<p class="home__blogs--contentSummary">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>-->
+                        <a href="products.html" class="home__blogs--button">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--#############################       HOME FORM      ##################################-->
+    <div class="home" style="padding: 0;">
+        <div class="home__form">
+            <h4 class="home__form--heading">GET <span>IN TOUCH</span></h4>
+            <p class="home__form--paragraph">
+                We value anything you have to say to us, feel free to reach out at us!
+            </p>
+            <form action="query.php" method="POST" class="home__form--form">
+                <input type="text" id="name" name="name" class="home__form--text" placeholder="Name">
+                <input type="email" id="email" class="home__form--text" name="email" placeholder="Email">
+                <textarea id="message" class="home__form--message" name="message" placeholder="COMMENT"></textarea>
+                <button type="submit" class="home__form--button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <!--#############################       FOOTER      ##################################-->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__left">
+                <a href="#" class="footer__left--logoBox">
+                    <img src="images/logo-final.svg" alt="" class="footer__left--logo">
+                </a>
+                <div class="footer__left--contentBox">
+                    <p class="footer__left--address">160 A Rajpur Road, Dehradun, Uttarakhand, 248001</p>
+                    <div class="footer__left--numbers">
+                        <a href="tel:+919410315083" class="footer__left--phone">+91 941 031 5083</a>
+                    </div>
+                    <div class="footer__left--emails">
+                        <a href="mailto:muladhar.info@gmail.com " class="footer__left--mail">muladhar.info@gmail.com </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__center">
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-facebook'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-twitter'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-linkedin'></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__right">
+                <h6 class="footer__right--heading">GET A NEWSLATTER</h6>
+                <form action="#" class="footer__right--newsletter">
+                    <input type="email" id="footerEmail" class="footer__right--email" placeholder="Your Email">
+                    <button type="submit" class="footer__right--button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copyrights">
+            All rights reserved. Created by, <a href="index.html">Muladhar</a>. 2019. Technology partner: <a href="http://adhyay.co.in" target="_blank">Adhyay Co.</a>
+        </p>
+    </footer>
+
+    <script src="js/slideshow.js"></script>
+    <!-- <script src="js/testimonial.js"></script> -->
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobilemenu.js"></script>
+</body>
+</html>

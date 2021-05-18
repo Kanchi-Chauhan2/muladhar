@@ -1,0 +1,33 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    @media only screen and (max-width: 64em){
+        font-size: 56.25%;
+    }
+    @media only screen and (max-width: 48em){
+        font-size: 50%;
+    }
+    @media only screen and (max-width: 28.125em){
+        font-size: 43.75%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+

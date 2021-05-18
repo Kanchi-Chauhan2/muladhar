@@ -1,0 +1,408 @@
+.about{
+    position: relative;
+    padding: 5rem;
+    @media only screen and (max-width: 48em){
+        padding: 2rem;
+    }
+    //--------------------------------SECTION-----------------------------------------
+    &__section{
+        position: relative;
+        background-image: url(../images/section_01_bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        padding-right: 35%;
+        @media only screen and (max-width: 48em){
+            padding-right: 0rem;
+        }
+        &--heading{
+            color: #333;
+            font-weight: 800;
+            font-family: $font--raleway;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            @media only screen and (max-width: 48em){
+                margin-bottom: 3rem;
+            }
+            & span{
+                font-weight: 100;
+            }
+        }
+        &--paragraph{
+            color: #333;
+            line-height: 1.6;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+        &--button{
+            padding: 1.9rem 2.8rem;
+            border-radius: 3rem;
+            border: 2px solid $color--primary--yellow;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #333;
+            font-family: $font--raleway;
+            transition: .3s;
+            display: block;
+            width: max-content;
+            &:hover{
+                color: #fff;
+                background-color: $color--primary--yellow;
+            }
+
+            @media only screen and (max-width: 48em){
+                padding: .9rem 2rem;
+            }
+        }
+        &--list{
+            padding-left: 5rem;
+        }
+        &--listitem{
+            color: #333;
+            line-height: 1.6;
+            font-size: 1.4rem;
+            font-weight: 700;
+            list-style: outside;
+
+        }
+    }
+    //--------------------------------NUMBERS-----------------------------------------
+    &__numbers{
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: center;
+
+        @media only screen and (max-width: 48em){
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 2rem;
+        }
+
+        &--box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (max-width: 48em){
+                justify-content: flex-start;
+            }
+        }
+        &--logo{
+            height: 6rem;
+            width: 6rem;
+            object-fit: contain;
+            object-position: center center;
+            border: 0;
+            margin-right: 1rem;
+            @media only screen and (max-width: 48em){
+                margin-right: 0;
+            }
+        }
+        &--numberbox{
+            position: relative;
+        }
+        &--number{
+            line-height: 1;
+            font-size: 3rem;
+            font-weight: 400;
+            color: rgb(51, 51, 51);
+            margin-bottom: 1rem;
+            font-family: $font--raleway;
+        }
+        &--paragraph{
+            line-height: 1.2;
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: Raleway, sans-serif;
+            color: rgb(85, 85, 85);
+            padding-left: 5px;
+        }
+    }
+    //-------------------------------TIMELINE-----------------------------------------
+    &.timeline{
+        background-color: #f39649;
+        padding: 10rem 5rem;
+        position: relative;
+        @media only screen and (max-width: 48em){
+            padding: 2rem;
+        }
+    }
+    &__timeline{
+        position: relative;
+        &--heading{
+            display: block;
+            margin-bottom: 6rem;
+            color: #fff;
+            font-weight: 900;
+            font-family: 'EssonnesHeadlineThin';
+            font-size: 4rem;
+            @media only screen and (max-width: 48em){
+                margin-bottom: 3rem;
+            }
+            & span{
+                font-weight: 100;
+            }
+        }
+        &--grid{
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: auto;
+            justify-content: center;
+            @media only screen and (max-width: 48em){
+                grid-template-columns: 1fr;
+            }
+        }
+        &--timeline{
+            width: 100%;
+            display: block;
+            @media only screen and (max-width: 48em){
+                display: grid;
+                grid-template-columns: 2rem 1fr;
+                grid-gap: 3rem;
+                grid-auto-rows: auto;
+            }
+        }
+        &--timelinebox{
+            width: 100%;            
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            @media only screen and (max-width: 48em){
+                align-items: flex-start;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        &--dot{
+            height: 16px;
+            width: 16px;
+            border-radius: 3rem;
+            border: 2px solid #fff;
+            z-index: 20;
+            position: relative;
+            background-color: #fff;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                height: 8px;
+                width: 8px;
+                border-radius: 3rem;
+                background-color: $color--primary--yellow;
+
+            }
+
+        }
+        &--line{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            z-index: 10;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #fff;
+            @media only screen and (max-width: 48em){
+                top: 16px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: calc(100% - 16px);
+            }
+        }
+        &--timeline:last-child &--timelinebox &--line{
+            display: none;
+        }
+        &--contentbox{
+            position: relative;
+            padding-right: 5rem;
+            
+            @media only screen and (max-width: 48em){
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+        &--number{
+            line-height: 1;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgb(51, 51, 51);
+            margin-bottom: 1rem;
+            font-family: $font--raleway;
+        }
+        &--title{
+            line-height: 1.2;
+            font-weight: 700;
+            font-family: $font--raleway;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        &--paragraph{
+            color: #ffffff;
+            font-size:14px;
+            font-weight:400;
+            line-height: 22px;
+        }
+    }
+    //-------------------------------TEAM---------------------------------------------
+    &__team{
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,33rem);
+        grid-auto-rows: auto;
+        grid-gap: 2rem;
+        justify-content: center;
+
+        @media only screen and (max-width: 64em){
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @media only screen and (max-width: 48em){
+            grid-template-columns: 30rem;
+        }
+
+        &--heading{
+            margin-bottom: 2rem;
+            color: #333;
+            font-weight: 900;
+            font-family: $font--raleway;
+            font-size: 4rem;
+            text-align: center;
+            @media only screen and (max-width: 48em){
+                margin-bottom: 1rem;
+            }
+            & span{
+                font-weight: 100;
+            }
+        }
+
+        &--paragraph{
+            text-align: center;
+            color: #333333;
+            line-height: 1.6;
+            font-size: 1.8rem;
+            font-weight: 300;
+            width: 50%;
+            margin-bottom: 2rem;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            @media only screen and (max-width: 64em){
+                width: 80%;
+            }
+            @media only screen and (max-width: 48em){
+                width: 100%;
+            }
+        }
+
+        &--member{
+            width: 100%;
+            height: 40rem;
+            position: relative;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        &--imagebox{
+            height: 80%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        &--image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .3s;
+            backface-visibility: hidden;
+        }
+        &--member:hover &--imagebox &--image{
+            transform: scale(1.2);
+        }
+        &--member:hover &--memberdetails &--name{
+            color: $color--primary--yellow;
+            transition: .3s;
+        }
+        &--memberdetails{
+            position: relative;
+            top: 75%;
+            background-color: #fff;
+            text-align: center;
+            height: 25%;
+
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+
+        }
+        &--member:hover &--memberdetails{
+            top: 70%;
+        }
+        &--name{
+            font-weight: 700;
+            text-transform: none;
+            margin-bottom: 10px;
+            font-family: $font--raleway;
+            color: #333;
+            font-size: 1.8rem;
+        }
+        &--occupation{
+            font-weight: 400;
+            text-transform: none;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #f59649;
+        }
+    }
+    //-------------------------------CERTIFICATES-------------------------------------
+    &__certificates{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,37rem);
+        grid-auto-rows: auto;
+        grid-gap: 2rem;
+        justify-content: center;
+        &--certificate{
+            box-shadow: 1px 1px 2px #00000025,-1px -1px 2px #00000025;
+            padding: 2rem;
+        }
+        &--imagesbox{
+            height: 40rem;
+            width: 100%;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        &--image{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center center;
+        }
+        &--descriptionbox{
+            width: 100%;
+            position: relative;
+        }
+        &--paragraph{
+            font-size: 1.4rem;
+            color: #333;
+            font-weight: 700;
+        }
+    }
+}

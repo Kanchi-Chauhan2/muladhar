@@ -1,0 +1,35 @@
+//------------------COLORS--------------------------
+$color--primary--yellow: #f59649;
+
+$color-card-1-primary : #ffb900;
+$color-card-1-secondary : #ff7730;
+
+$color-card-2-primary : #7ed56f;
+$color-card-2-secondary : #28b485;
+
+$color-card-3-primary : #2998ff;
+$color-card-3-secondary : #5643fa;
+
+
+// FONTS============================================
+
+@font-face{
+    src: url(Brusher.ttf);
+    font-family: 'Brusher';
+}
+
+@font-face{
+    src: url(Essonnes/EssonnesHeadlineRegular.otf);
+    src: url(Essonnes/EssonnesHeadlineThin.otf);
+    font-family: 'Essonnes';
+}
+
+@font-face{
+    src: url(BigCaslonMedium/BigCaslonMedium.ttf);
+    font-family: 'Big Caslon';
+}
+
+$font--opensans : 'Open Sans', sans-serif;
+$font--raleway: 'Raleway', sans-serif;
+$font--brusher: 'Brusher';
+

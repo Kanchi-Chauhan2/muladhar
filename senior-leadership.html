@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muladhar Agronomics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;900&family=Raleway:wght@100;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <style>
+        .popup{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100000;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(.5);
+        }
+        .popup:target{
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        .popup__close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 5rem;
+            width: 5rem;
+            background-color: #fff;
+            z-index: 10000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup__close::after{
+            content: 'X';
+            color: #222;
+            font-size: 3rem;
+        }
+        .popup__content{
+            position: relative;
+            padding: 5rem;
+            background-color: #f59649;
+            width:80%;
+            z-index: 10000000;
+        }
+        .popup__content::before, .popup__content::after{
+            font-size: 10rem;
+            position: absolute;
+            z-index: 0;
+            color: rgba(255, 255, 255, 0.2);
+        }
+        .popup__content::before{
+            content: '“';
+            top: 1rem;
+            left: 2rem;
+        }
+        .popup__content::after{
+            content: '”';
+            bottom: -1rem;
+            right: 2rem;
+        }
+        .popup__content--paragraph{
+            line-height: 1.2;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1000000;
+        }
+        .popup__content--paragraph strong{
+            color: #000;
+        }
+        @media only screen and (max-width: 48em){
+            .popup__content{
+                width: 90%;
+            }
+        }
+        @media only screen and (max-width: 28.125em){
+            .popup__content{
+                width: 95%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="popup" id="popup1">
+        <a href="#member1" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Armaan Kapoor-</strong> Current position in Mulahar as President/Promoter, heading the execution and management department in the corporation. Armaan Kapoor’s leadership in  the MCSL has undergone remarkable creation focused on remarkable Cooperative solutions that opened the door for growth in key global agricultural macro developments, drive constant progress, and combine resource management within the Cooperative. He also drove the expanded use of advanced technology to address existing demands, develop capabilities and apply skills and generate value in the world of agronomics. Before establishing the MCSL, Armaan Kapoor had a fruitful 25-year career as a key component for advising and consulting, policy formulation and much more in government and private institutions.
+
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup2">
+        <a href="#member2" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Parmendar Singh-</strong> He is The Director of Muladhar Agronomics LLP having profound knowledge of  agricultural origination, oilseeds processing technical capabilities, with a focus on ensuring that technology delivers competitive advantage and that Muladhar Agronomics  delivers on its strong pipeline of improvements in agronomics. Strategy making for Muladhar Agronomics, global human and animal nutrition, including complete feed, premixes, additives, specialty feed ingredients and services for the livestock, aqua-culture, conservation and preservation of ancient grains and seeds, edible beans, specialty proteins. Before in Muladhar Agronomics , Parmendar Singh  has spent years at Development of Horticulture ,floriculture and animal husbandry. And have developed a new and sustainable model of farming. He is a research Scholar of environment. 
+
+            </p>
+            <!--<p class="popup__content--paragraph">
+                Raam Kumar Charborty,  is secretary of MCSL as such, he bears responsibility for the global legal- compliance, administrative, governmental, development, insurance and corporate philanthropy divisions of the cooperative in this capacity as well as offering financial expertise and analysis to support returns and sustainable growth, to support strategic goals in its national and global fund management and business development initiatives.
+            </p>
+   
+            <p class="popup__content--paragraph">
+                Ram Kumar Chakrborty is a pioneer in the food business (Ashnan) from the past 25 years and excels in the field with a greater devotion each year
+            </p>-->
+        </div>
+    </div>
+    <div class="popup" id="popup3">
+        <a href="#member3" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Abhishek Thapliyal-</strong> Abhishek Thapliyal is the Director of Muladhar Agronomics LLP and also is a Global Operations Head. He handles Enforcement and regulatory policy and global initiatives for the organisation, including the Code of Conduct, Ethics, Helpline Enforcement with Commerce, Data Security and Interest Conflicts. Enterprise-wide compliance policies, programmes, and avoidance of risks, enterprise-wide security strategies, programs and risk mitigation.
+
+                
+                
+            </p>
+            
+            <p class="popup__content--paragraph">
+                Manages the company's market and security concern and organizes Muladhar Agronomics LLP mergers and acquisitions Nationally and internationally.            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup4">
+        <a href="#member4" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Manu Chopra-</strong> He is member of the board and is responsible for all of MCSL information technology strategies, including initiatives to improve the quality and integrity of the company’s data and strengthen MCSL’s analytical capabilities. He is the best orator and heads communication depratment, who  provides guidance and strategic direction towards the natural working system within the cooperative.
+            </p>
+            <p class="popup__content--paragraph">
+                    He indulges in leadership and strategic management, leading the cooperative towards transformations, mergers and acquisitions, and growth initiatives.<br>
+                        Former Indian Army Officer, Doctor and Spiritual Seeker Manu Chopra is spreading awareness about preventive lifestyle for wellness and longevity.
+
+                   </p>
+        </div>
+    </div>
+    <div class="popup" id="popup5">
+        <a href="#member5" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Meenu Ale-</strong> She is a member of the board and has a variety of merchandising and management roles.  Spice Processing business unit, she has responsibility for the cooperative National and  Global sweeteners and starches, organic Proteins, and wheat milling businesses, a portfolio that has expanded globally in recent years.
+
+                    <p class="popup__content--paragraph">
+                    She is a women activist having a group of 500 plus women self-help groups, protecting food and financial sovereignty. Promoter of the regional arts and handicraft and activist for regional artisans. And providing them a platform nationally and globally. 
+                   </p>
+                </p>
+        </div>
+    </div>
+    <div class="popup" id="popup6">
+        <a href="#member6" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Vijay Kumar Bhatt-</strong> He is a member of the board  and has a responsibility for the cooperative agricultural origination, oilseeds processing technical capabilities, with a focus on ensuring that technology delivers competitive advantage and that MCSL delivers on its strong pipeline of improvements in agronomics. Strategy making for MCSL global human and animal nutrition, including complete feed, premixes, additives, speciality feed ingredients and services for the livestock, aqua-culture, conservation and preservation of ancient grains and seeds, edible beans, specialty proteins.
+            </p>
+            <p class="popup__content--paragraph">Before MCSL in , Dr.Vijay Kumar Bhatt  has spent  years at Development of Horticulture ,floriculture and animal husbandry. And have developed a new and sustainable model of farming. </p>
+            <p class="popup__content--paragraph">He is a running PhD Scholar of naturopathy and has been acquainted to the Welham School, The Doon School, and the Vana Wellness Retreat. Flute is his second Identity.  
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup7">
+        <a href="#member7" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Ashutosh Saklani-</strong> He is a member of the board in Muladhar Agronomics. Ltd, acting as catalyst for the Agro-product Development and marketing. 
+            </p>
+            <p class="popup__content--paragraph">Ashutosh is very active in the hospitality and travel industry and playing a big role in the same, he promotes a healthy working culture and provides a balance towards work and leisure. He is the key member for the agro product marketing and promotional activities in the cooperative. </p>
+            <p class="popup__content--paragraph">He has been in the travel and hospitality sectors for the past three decades. Launched his tour operation activities in Dehradun in 1996 under the brand name Spick Tours. Has vast experience in hospitality,adventure and travel.  
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup8">
+        <a href="#member8" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Vinod Sharma-</strong> He is a member of the board,  heading National and  Global Institutional sales and distribution department, range of merchandising, operations and logistics and nutrition optimization. National and global supply chain function, including sales & operations planning and delivery optimization, and leads initiatives to maximize value from our assets and product portfolio.
+            </p>
+        </div>
+    </div>
+     <div class="popup" id="popup9">
+        <a href="#member9" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Rajesh Singh-</strong> He is a member of the board ,handling farmers channels throughout the state. He is also responsible for strategic oversight of  MCSL   functions towards farmers end , managing  technical training and awaring the farmers for the same. He  has strong leadership and resource management. 
+
+            </p>
+        </div>
+    </div>
+    <div class="popup" id="popup10">
+        <a href="#member10" class="popup__close"></a>
+        <div class="popup__content">
+            <p class="popup__content--paragraph">
+                <strong>Ram Kumar Chakrborty-</strong> is secretary of MCSL as such, he bears responsibility for the global legal- compliance, administrative, governmental, development, insurance and corporate philanthropy divisions of the cooperative in this capacity as well as offering financial expertise and analysis to support returns and sustainable growth, to support strategic goals in its national and global fund management and business development initiatives. He is a pioneer in the food business (Ashnan) from the past 25 years and excels in the field with a greater devotion each year.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!--#############################       HEADER      ##################################-->
+    <header class="header header__absolute">
+        <div class="header__linkbox">
+            <a href="index.html" class="header__link">Home</a>
+            <p class="header__link header__dropdown" style="cursor: pointer;">Who we are <span class="caret fa fa-chevron-down"></span></p>
+            <p class="header__link header__dropdown select" style="cursor: pointer;">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        </div>
+        <div class="header__logobox">
+            <a href="index.html" class="header__logolink">
+                <img src="images/logo1.svg" alt="" class="header__logo">
+            </a>
+        </div>
+        <div class="header__linkbox">
+            <a href="news.html" class="header__link">Our news</a>
+            <a href="contact.html" class="header__link">Get in touch</a>
+        </div>
+    </header>
+    <!--#############################       DROPDOWN    ###################################-->
+    <div class="dropdown">
+        <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+        <a href="our-farmers.html" class="dropdown__link">Our farmers</a>
+        <a href="services.html" class="dropdown__link">Our services</a>
+        <a href="products.html" class="dropdown__link">Our products</a>
+    </div>
+    <!--#############################       DROPDOWN 2   ###################################-->
+    <div class="dropdown">
+        <a href="senior-leadership.html" class="dropdown__link">Senior Leadership</a>
+        <a href="executive-team.html" class="dropdown__link">Executive Team</a>
+        <a href="advisory-board.html" class="dropdown__link">Advisory Board</a>
+    </div>
+    <!--#############################       MOBILEMENU  ###################################-->
+    <div class="mobile__burger">
+        <div class="mobile__burger--line mobile__burger--top"></div>
+        <div class="mobile__burger--line mobile__burger--center"></div>
+        <div class="mobile__burger--line mobile__burger--bottom"></div>
+    </div>
+
+    <div class="mobile__menu">
+        <a href="index.html" class="mobile__menulink">Home</a>
+        <p class="mobile__menulink mobile__dropdownbutton">Who we are <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="about-cooperative.html" class="dropdown__link">About Cooperative</a>
+            <a href="our-farmers.html" class="mobile__menulink">Our farmers</a>
+            <a href="services.html" class="mobile__menulink">Our services</a>
+            <a href="products.html" class="mobile__menulink">Our products</a>
+        </div>
+        <p class="mobile__menulink mobile__dropdownbutton">Leadership <span class="caret fa fa-chevron-down"></span></p>
+        <div class="mobile__dropdown">
+            <a href="board-members.html" class="mobile__menulink">Board Members</a>
+            <a href="advisory-board.html" class="mobile__menulink">Advisory Board</a>
+            <a href="core-team.html" class="mobile__menulink">Core Team</a>
+        </div>
+        <a href="news.html" class="mobile__menulink">Our news</a>
+        <a href="contact.html" class="mobile__menulink">Get in touch</a>
+    </div>
+    <!--############################    BANNER      ###########################################-->
+    <div class="banner">
+        <img src="images/abcde.jpg" alt="" class="banner__image">
+        <p class="banner__title">More About</p>
+        <h4 class="banner__heading">SENIOR LEADERSHIP</h4>
+        <p class="banner__paragraph">
+            We are a unified team of optimistic individuals, who believe in the upliftment of people and work together towards the common goal of peaceful co-existence and a world full of healthy choices.
+        </p>
+    </div>
+    <!--############################    ABOUT SECTION      ###########################################-->
+
+    
+     <!--############################    ABOUT TEAM      ###########################################-->
+    <div class="about">
+        <h4 class="about__team--heading">MULADHAR  <span>AGRONOMICS LLD</span> </h4>
+        <p class="about__team--paragraph">
+            The talent and dedication of our workforce is the foundation of our success
+        </p>
+        <div class="about__team">
+            
+            <div class="about__team--member" id="member2">
+                <div class="about__team--imagebox">
+                    <img src="images/Parmender-Singh.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup2" class="about__team--name">
+                        Parmendar Singh
+                    </a>
+                    <p class="about__team--occupation">
+                        Technical and Scientific advisor
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member3">
+                <div class="about__team--imagebox">
+                    <img src="images/team1.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup3" class="about__team--name">
+                        Abhishek Thapliyal
+                    </a>
+                    <p class="about__team--occupation">
+                        Vice-President
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--############################    ABOUT NUMBERS      ###########################################-->
+    <!--<div class="about">
+        <div class="about__numbers">
+            <div class="about__numbers--box">
+                <img src="images/ico_count_1-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">1950</h4>
+                    <p class="about__numbers--paragraph">Tons of products</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_2-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">300</h4>
+                    <p class="about__numbers--paragraph">Vendor Outlets</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_3-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">648</h4>
+                    <p class="about__numbers--paragraph">Area (Hector)</p>
+                </div>
+            </div>
+            <div class="about__numbers--box">
+                <img src="images/ico_count_4-1.png" alt="" class="about__numbers--logo">
+                <div class="about__numbers--numberbox">
+                    <h4 class="about__numbers--number">1000</h4>
+                    <p class="about__numbers--paragraph">Area to harvest (Hecto) </p>
+                </div>
+            </div>            
+        </div>
+    </div>-->
+    <!--############################    ABOUT TIMELINE      ###########################################-->
+    <!--<div class="about timeline">
+        <div class="about__timeline">
+            <h4 class="about__timeline--heading">
+                OUR<span> HISTORY</span>
+            </h4>
+
+            
+            <div class="about__timeline--grid">
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2015
+                        </h4>
+                        <p class="about__timeline--title">
+                            The inception of the Idea is taking place
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Armaan Kapoor began to perceive the economically autonomous farmer and the world in which no one is undernourished
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2019
+                        </h4>
+                        <p class="about__timeline--title">
+                            The Muladhar Agronomics Society was drafted
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            The existence of the agronomics movement started keeping the bigger picture in mind, to revolutionize agriculture sector 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2020
+                        </h4>
+                        <p class="about__timeline--title">
+                            Incorporation of the society was initiated
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            With our great efforts, we are happy to mention that the final incorporation was completed in Aug 2020, and we officiated our work with the farmers 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2021
+                        </h4>
+                        <p class="about__timeline--title">
+                            Our service expansion program 
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Muladhar added the following art of work within the agribusiness, including- milling, refining, specialty foods, nutritious ingredients and so on.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="about timeline">
+        <div class="about__timeline">
+            <h4 class="about__timeline--heading">
+                OUR<span> HISTORY</span>
+            </h4>
+
+            
+            <div class="about__timeline--grid">
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2018
+                        </h4>
+                        <p class="about__timeline--title">
+                            The inception of the Idea is taking place
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Mr.Abhishek Thapliyal began to perceive the economically autonomous farmer and the world in which no one is undernourished
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2020
+                        </h4>
+                        <p class="about__timeline--title">
+                            The Muladhar Agronomics Society was drafted
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            The existence of the agronomics movement started keeping the bigger picture in mind, to revolutionize agriculture sector. Creating a global footprint by serving globally                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2021
+                        </h4>
+                        <p class="about__timeline--title">
+                            Incorporation was initiated                         </p>
+                        <p class="about__timeline--paragraph">
+                            With our great efforts, we are happy to mention that the final incorporation was completed in Aug 2020, and we officiated our work with the farmers 
+                        </p>
+                    </div>
+                </div>
+                <div class="about__timeline--timeline">
+                    <div class="about__timeline--timelinebox">
+                        <div class="about__timeline--dot"></div>
+                        <div class="about__timeline--line"></div>
+                    </div>
+                    <div class="about__timeline--contentbox">
+                        <h4 class="about__timeline--number">
+                            2022
+                        </h4>
+                        <p class="about__timeline--title">
+                            Our service expansion program 
+                        </p>
+                        <p class="about__timeline--paragraph">
+                            Muladhar added the following art of work within the agribusiness, including- milling, refining, specialty foods, nutritious ingredients and so on.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--############################    ABOUT TEAM      ###########################################
+    <div class="about">
+            
+        <div class="about__team">
+            <div class="about__team--member" id="member4">
+                <div class="about__team--imagebox">
+                    <img src="images/team3.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup4" class="about__team--name">
+                        Manu Chopra
+                    </a>
+                    <p class="about__team--occupation">
+                        Member of the board
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member5">
+                <div class="about__team--imagebox">
+                    <img src="images/team4.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup5" class="about__team--name">
+                        Meenu Ale
+                    </a>
+                    <p class="about__team--occupation">
+                       Member of the board
+                    </p>
+                </div>
+            </div>
+            <div class="about__team--member" id="member6">
+                <div class="about__team--imagebox">
+                    <img src="images/team5.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup6" class="about__team--name">
+                        Vijay Kumar Bhatt
+                    </a>
+                    <p class="about__team--occupation">
+                        Member of the board
+                    </p>
+                </div>             
+            </div>
+            
+              <div class="about__team--member" id="member7">
+                <div class="about__team--imagebox">
+                    <img src="images/austosh.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup7" class="about__team--name">
+                        Ashutosh Saklani
+                    </a>
+                    <p class="about__team--occupation">
+                        Member of the board
+                    </p>
+                </div>             
+            </div>
+             <div class="about__team--member" id="member8">
+                <div class="about__team--imagebox">
+                    <img src="images/Vinod-sharma.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup8" class="about__team--name">
+                        Vinod Sharma
+                    </a>
+                    <p class="about__team--occupation">
+                       Member of the board
+                    </p>
+                </div>             
+            </div>
+            <div class="about__team--member" id="member9">
+                <div class="about__team--imagebox">
+                    <img src="images/rajesh.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup9" class="about__team--name">
+                        Rajesh Singh
+                    </a>
+                    <p class="about__team--occupation">
+                       Member of the board
+                    </p>
+                </div>             
+            </div>
+            <div class="about__team--member" id="member10">
+                <div class="about__team--imagebox">
+                    <img src="images/team2.jpg" alt="" class="about__team--image">
+                </div>
+                <div class="about__team--memberdetails">
+                    <a href="#popup10" class="about__team--name">
+                        Ram Kumar Chakraborty
+                    </a>
+                    <p class="about__team--occupation">
+                        secretary
+                    </p>
+                </div>             
+            </div>
+        </div>
+    </div>-->
+    <!--#############################       HOME FORM      ##################################-->
+    <div class="home" style="padding: 0;">
+        <div class="home__form">
+            <h4 class="home__form--heading">GET <span>IN TOUCH</span></h4>
+            <p class="home__form--paragraph">
+                We value anything you have to say to us, feel free to reach out at us!
+            </p>
+            <form action="#" class="home__form--form">
+                <input type="text" id="name" class="home__form--text" placeholder="Name">
+                <input type="email" id="email" class="home__form--text" placeholder="Email">
+                <textarea id="message" class="home__form--message" placeholder="COMMENT"></textarea>
+                <button type="submit" class="home__form--button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <!--#############################       FOOTER      ##################################-->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__left">
+                <a href="#" class="footer__left--logoBox">
+                    <img src="images/logo-final.svg" alt="" class="footer__left--logo">
+                </a>
+                <div class="footer__left--contentBox">
+                    <p class="footer__left--address">160 A Rajpur Road, Dehradun, Uttarakhand, 248001</p>
+                    <div class="footer__left--numbers">
+                        <a href="tel:+919410315083" class="footer__left--phone">+91 941 031 5083</a>
+                    </div>
+                    <div class="footer__left--emails">
+                        <a href="mailto:muladhar.info@gmail.com " class="footer__left--mail">muladhar.info@gmail.com </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__center">
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-facebook'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-twitter'></use>
+                    </svg>
+                </a>
+                <a href="#" class="footer__center--link">
+                    <svg class="footer__center--social">
+                        <use href='images/social-sprite.svg#icon-linkedin'></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__right">
+                <h6 class="footer__right--heading">GET A NEWSLATTER</h6>
+                <form action="#" class="footer__right--newsletter">
+                    <input type="email" id="footerEmail" class="footer__right--email" placeholder="Your Email">
+                    <button type="submit" class="footer__right--button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copyrights">
+            All rights reserved. Created by, <a href="index.html">Muladhar</a>. 2019. Technology partner: <a href="http://adhyay.co.in" target="_blank">Adhyay Co.</a>
+        </p>
+    </footer>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobilemenu.js"></script>
+    <!--############################        PRELOADER       ##############################-->
+
+</body>
+</html>
